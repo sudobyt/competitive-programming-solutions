@@ -1,0 +1,16 @@
+class Solution:
+    # @param A : string
+    # @return an integer
+    def solve(self, A):
+        A=list(A)
+        s=0
+        z=['a','e','i','o','u','A','E','I','O','U']
+        l=[]
+        i=0
+        while i<len(A):
+            if A[i] in z:
+             
+                s=s+len(A)-i
+            i=i+1
+     
+        return s%10003
