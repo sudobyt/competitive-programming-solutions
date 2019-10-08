@@ -1,0 +1,18 @@
+class Solution:
+    # @param A : head node of linked list
+    # @return the head node in the linked list
+    def sortList(self, A):
+        head = A
+        L = []
+        i = 0
+        while head:
+            L.append(head.val)
+            head = head.next
+        L = sorted(L)
+        head = A
+        while head:
+            head.val = L[i]
+            head = head.next
+            i+=1
+        return A
+
